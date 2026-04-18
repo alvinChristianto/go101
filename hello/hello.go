@@ -53,6 +53,8 @@ func main() {
 
 	fmt.Println("1+1 =", 1+1)
 	fmt.Println("7.0/3.0 =", 7.0/3.0)
+	fmt.Println("7.0/3.0 =", 7.12/3.45)
+	fmt.Printf("type of 7.12 %T\n", 7.12)
 
 	fmt.Println(true && false)
 	fmt.Println(true || false)
@@ -76,6 +78,8 @@ func main() {
 	fmt.Println(f)
 
 	fmt.Println("\n---------------> constants")
+	fmt.Println(`   In JavaScript, const only creates a "constant reference". This means you cannot point the variable to something else, but if the value is an object or array, you can still modify its contents.
+   In Go, a constant is the value itself. Because Go constants are restricted to simple scalars (numbers, strings, booleans), there are no "internal parts" to modify. A Go constant is immutable in every sense of the word.`)
 
 	fmt.Println("date:", date)
 	fmt.Println("thisText:", thisText)
@@ -88,4 +92,31 @@ func main() {
 	fmt.Println(int64(dd))
 
 	fmt.Println(math.Sin(n))
+
+	fmt.Println("\n---------------> for loops")
+	i := 1
+	for i <= 3 {
+		fmt.Println(i)
+		i = i + 1
+	}
+
+	for j := 0; j < 3; j++ {
+		fmt.Println(j)
+	}
+
+	for i := range 3 {
+		fmt.Println("range", i)
+	}
+
+	for {
+		fmt.Println("loop")
+		break
+	}
+
+	for n := range 6 {
+		if n%2 == 0 {
+			continue
+		}
+		fmt.Println(n)
+	}
 }
